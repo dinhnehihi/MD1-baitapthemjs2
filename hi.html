@@ -29,6 +29,7 @@
             <select id='from_currency'>
               <option value="VND">VND</option>
               <option value="CNY">CNY</option>
+              <option value="GBP">GBP</option>
             </select>
           </form>
         </div>
@@ -39,6 +40,7 @@
             <select id='to_currency'>
               <option value="USD">USD</option>
               <option value="EUR">EUR</option>
+              <option value="THB">THB</option>
             </select>
           </form>
         </div>
@@ -70,14 +72,44 @@
           var result = text.fontcolor("purple");
           document.write(result);
         }
+        else if (fromCurrency === 'VND' && toCurrency === 'THB') {
+          var doConvert = amount * 0.0015;
+          var text = "Result: " + doConvert + " " + toCurrency;
+          var result = text.fontcolor("purple");
+          document.write(result);
+        }
         else if (fromCurrency === 'CNY' && toCurrency === 'USD') {
           var doConvert = amount * 0.16;
           var text = "Result: " + doConvert + " " + toCurrency;
           var result = text.fontcolor("purple");
           document.write(result);
         }
-        else {
+        else if (fromCurrency === 'CNY' && toCurrency === 'EUR') {
           var doConvert = amount * 0.14;
+          var text = "Result: " + doConvert + " " + toCurrency;
+          var result = text.fontcolor("purple");
+          document.write(result);
+        }
+        else if (fromCurrency === 'CNY' && toCurrency === 'THB') {
+          var doConvert = amount * 5.22;
+          var text = "Result: " + doConvert + " " + toCurrency;
+          var result = text.fontcolor("purple");
+          document.write(result);
+        }
+        else if (fromCurrency === 'GBP' && toCurrency === 'USD') {
+          var doConvert = amount * 1.37;
+          var text = "Result: " + doConvert + " " + toCurrency;
+          var result = text.fontcolor("purple");
+          document.write(result);
+        }
+        else if (fromCurrency === 'GBP' && toCurrency === 'EUR') {
+          var doConvert = amount * 1.20;
+          var text = "Result: " + doConvert + " " + toCurrency;
+          var result = text.fontcolor("purple");
+          document.write(result);
+        }
+        else {
+          var doConvert = amount * 45.37;
           var text = "Result: " + doConvert + " " + toCurrency;
           var result = text.fontcolor("purple");
           document.write(result);
